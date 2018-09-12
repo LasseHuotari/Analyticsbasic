@@ -3,3 +3,5 @@ Harjoituksessa 2 tarkastellaan ihmisen nukkumisen ja käyttäytymisen suhdetta. 
 Käytä harjoitusta tehtäessä hyväksi jo ennalta opittuja taitoja ja koita näitä hyödyntäen kuvata sekä numeerisesti, että visualisoinnin kautta datasta tehtyjä havaintoja mahdollisimman kattavasti.
 
 Apunasi voit käyttää Analyticsbasic repositoryn päänäkymästä löytyvää pandas ja python cheat sheet ohjeita.
+
+Palauta tekemäsi analyysi Omaan ipynb formaatissa, jonka saat Watson Studiosta ladattua.
