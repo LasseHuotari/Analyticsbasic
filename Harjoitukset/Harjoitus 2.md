@@ -12,10 +12,10 @@ Palauta tekemäsi analyysi Omaan ipynb formaatissa, jonka saat Watson Studiosta 
 
 Tietokuvaus:
 
-Date: päivämäärä YYYY-MM-DD muodossa \n
-nOfIncidents - Asiakkaan huonon käytöksen lukumäärä hoitajien havaintojen perusteella \n
-SleepingHours - nukutut tunnit \n
-Awakenings - Heräämiset yön aikana \n
-RHR - leposykkeen keskiarvo \n
-ActiveTime - Aktiivisuusaika \n
+Date: päivämäärä YYYY-MM-DD muodossa <br/>
+nOfIncidents - Asiakkaan huonon käytöksen lukumäärä hoitajien havaintojen perusteella <br/>
+SleepingHours - nukutut tunnit <br/>
+Awakenings - Heräämiset yön aikana <br/>
+RHR - leposykkeen keskiarvo <br/>
+ActiveTime - Aktiivisuusaika <br/>
 Steps - Askelmäärä
