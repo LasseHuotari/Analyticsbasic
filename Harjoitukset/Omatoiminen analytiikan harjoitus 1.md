@@ -1,7 +1,7 @@
-# Harjoitus 2
+# Omatoiminen analytiikan harjoitus 1
 
 
-Harjoituksessa 2 tarkastellaan ihmisen nukkumisen ja käyttäytymisen suhdetta. Harjoituksessa käytetöön Data kansiosta löytyvää SportClock.csv tiedostoa, joka on hypoteettinen datasetti älyrannekkeesta saaduista dementtia potilaiden tiedoista.
+Omatoimisessa analytiikan harjoitus 1:ssä tarkastellaan ihmisen nukkumisen ja käyttäytymisen suhdetta. Harjoituksessa käytetöön Data kansiosta löytyvää SportClock.csv tiedostoa, joka on hypoteettinen datasetti älyrannekkeesta saaduista dementtia potilaiden tiedoista.
 
 Käytä harjoitusta tehdessäsi hyväksi jo ennalta opittuja taitoja ja koita näitä hyödyntäen kuvata, sekä numeerisesti, että visualisoinnin kautta datasta tehtyjä havaintoja mahdollisimman kattavasti. Tutki myös datan laatua.
 
