@@ -7,14 +7,14 @@ Käytä harjoitusta tehdessäsi hyväksi jo ennalta opittuja taitoja ja koita n�
 
 Apunasi voit käyttää Analyticsbasic repositoryn päänäkymästä löytyvää pandas ja python cheat sheet ohjeita.
 
-Vinkki: Visualisoinnissa helppo koodi on df['Awakenings'].value_counts().plot(kind="bar",figsize=(10,10))
+Vinkki: Visualisoinnissa helppo koodi on df['Awakenings'].value_counts().plot(kind="bar",figsize=(10,10))<br/>
 
-Jossa df on dataframen nimi, määritelty solussa jossa datan tuot sisään, ellet ole sitä muuttanut.
-['Awakenings'] kolumnin nimi, tässä esimerkissä Awakenings
-.value_counts() laskee yhteen montakokertaa havaintoja esiintyy datassa
-.plot() piirtää graafin
-kind="bar" on graaffin tyyppi, tässä tapauksessa pylväs. (Koita esim line ja scatter)
-figsize=(19,10) kuvaajan koko
+Jossa df on dataframen nimi, määritelty solussa jossa datan tuot sisään, ellet ole sitä muuttanut.<br/>
+['Awakenings'] kolumnin nimi, tässä esimerkissä Awakenings<br/>
+.value_counts() laskee yhteen montakokertaa havaintoja esiintyy datassa<br/>
+.plot() piirtää graafin<br/>
+kind="bar" on graaffin tyyppi, tässä tapauksessa pylväs. (Koita esim line ja scatter)<br/>
+figsize=(19,10) kuvaajan koko<br/>
 
 Palauta tekemäsi analyysi Omaan ipynb formaatissa, jonka saat Watson Studiosta ladattua.
 
