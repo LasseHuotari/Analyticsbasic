@@ -194,7 +194,7 @@ Raaha uusi **Derive** node kanvakselle ja yhdistä se **month** nodeen. Avaa uus
 
 **endif**
 
-![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%2010.01.12.png "New flow Text 19")
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%2014.26.48.png "New flow Text 19")
 
 Paina **Run**
 
