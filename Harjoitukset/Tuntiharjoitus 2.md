@@ -194,7 +194,7 @@ Paina **Run**
 
 Tarkastellaksemme havaintoja kunkin periodin osalta tarvitsemme **Aggregate** noden joka löytyy **Record Operations** valikon alta, yhdistä se **period** nodeen.
 
-Vaihda noden nimeksi **AGG period** ja **Key fields** kohtaan lisää **period** 
+Vaihda noden nimeksi **AGG year** ja **Key fields** kohtaan lisää **period** 
 
 ![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.14.52.png "New flow Text 20")
 
@@ -218,7 +218,7 @@ Tee sama toiselle graafille, mutta vaihda **Y**-muuttujaksi **Ssleepinghours_mea
 
 Paina **Save**
 
-Lisää vielä **Output** valikosta **table** node ja yhdistä sekin **AGG period** nodeen. Tällä nodella näämme luomamme aggregoinnin.
+Lisää vielä **Output** valikosta **table** node ja yhdistä sekin **AGG year** nodeen. Tällä nodella näämme luomamme aggregoinnin.
 
 Paina **Run**
 
