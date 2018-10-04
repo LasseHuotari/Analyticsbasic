@@ -181,7 +181,7 @@ Tämän jälkeen **Derived Field Name** kohtaan kirjoita **month** ja **Expressi
 
 Raaha uusi **Derive** node kanvakselle ja yhdistä se **month** nodeen. Avaa uusi **derive** node. Vaihda Noden nimi **Period**:ksi ja **Derived Field Name** kohtaan kirjoita **period**. Vaihda **Measurement Nomial** muotoon. **Expression** kohtaan kirjoita kaava **to_string(year) >< "-" >< to_string(month)**
 
-![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.00.04.png "New flow Text 19")
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%2010.01.12.png "New flow Text 19")
 
 Paina **Run**
 
