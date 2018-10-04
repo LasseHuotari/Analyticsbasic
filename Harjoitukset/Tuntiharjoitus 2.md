@@ -297,7 +297,7 @@ Lisää **mport** valikon alta node valinnasta node **User Input** ja yhdistä s
 
 ![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.47.07.png "New flow Text 26")
 
-Paina **Define fields** nappia ja avautuvassa ikkunassa klikkaa **Add value** kolmesti. **Field name** kohtaan lisää eri riveille **SSleepinghours**, **awakenings** ja **RHR** eli meidän mallin **inputit**
+Paina **Define fields** nappia ja avautuvassa ikkunassa klikkaa **Add value** kolmesti. **Field name** kohtaan lisää eri riveille **Ssleepinghours**, **awakenings** ja **RHR** eli meidän mallin **inputit**
 
 Vaihda kaikkien **Storage** kohta **Integer**:iksi
 
