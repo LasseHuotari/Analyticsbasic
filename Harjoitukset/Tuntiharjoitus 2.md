@@ -6,6 +6,11 @@ Tehtävässä käytämme SPSS-modeler työkalua, joka on osa Watson Studiota.
 
 ## Vaihe 1.
 
+### Lisää data projektiin
+
+Kuten aikaisemminkin on tehty niin samalla tavalla lisää githubista löytyvä datasetti dementiapart2.csv projektiisi Watson Studiossa.
+
+
 ### Luo Modeler flow
 
 Watson Studiossa valitse ensin projektisi ja projektin asset-välilehdellä etsi kohta **Modeler Flows** paina **New flow** painiketta
