@@ -318,3 +318,5 @@ Näet nyt syöttämilläsi arvoilla tehdyn ennusteen.
 ## Vaihe 7
 
 Harjoitus on nyt valmis ja olet luonut end to end flow, jossa data tuodaan sisään, sen laatu varmistetaan, siitä tehdään havaintoja jotka tukee sekä haluttua mallia, että toissijaisia tavoitteita kuten miten henkilön käyttäytyminen on muuttunut ajanjakson ajalla.
+
+Palauta työstäsi itse flow jonka saa ladattua **Toolbarista** löytyvällä download napilla, sekä välitehtävien vastaukset.
