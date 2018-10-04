@@ -188,9 +188,9 @@ Raaha uusi **Derive** node kanvakselle ja yhdistä se **month** nodeen. Avaa uus
 
 **if month < 10**
 
-**then to_string(year) >< "-" >< to_string(month)
+**then to_string(year) >< "-" >< to_string(month)**
 
-**else to_string(year) >< "-" >< "9" >< to_string(month)
+**else to_string(year) >< "-" >< "9" >< to_string(month)**
 
 **endif**
 
