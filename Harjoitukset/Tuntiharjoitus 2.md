@@ -61,6 +61,8 @@ Tämän jälkeen tuplaklikkaa kanvakselle siirrettyä **Data Asset** nodea ja va
 
 ![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%207.35.46.png "New flow Text 4")
 
+## Vaihe 4
+
 ### Datan preparointi
 
 #### Type node
@@ -159,6 +161,22 @@ Graafin tarkastelu vahvistaa korrelaatio havainnon. Kaikki graafin pallot ovat s
 
 
 ![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%208.35.11.png "New flow Text 16")
+
+#### Uusien muuttujien luominen
+
+Saavuttaaksemme vielä parempaa ymmärrystä käsiteltävästä keissistä luomme muuttujat **kuukausi** ja **period**. Näiden muuttujien avulla saamme paremman käsityksen siitä miten datan kohdehenkilön käyttäytyminen on muuttunut datan keruu aikana.
+
+#### Month
+
+**Field Operators** valikosta raahaa **derive** node kanvakselle. Yhdistä **Derive** node **Type** nodeen ja avaa **Derive** node.
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%208.56.45.png "New flow Text 17")
+
+Muuta noden nimi month nimiseksi. Saat muutettua noden nimeä Derive-tekstin oikealta puolelta löytyvästä kynästä.
+
+Tämän jälkeen **Derived Field Name** kohtaan kirjoita **month** ja **Expression** kohtaan kirjoita kaava **datetime_month(date)**. Vaihda vielä **Measurement Categorial** muotoon.
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.00.04.png "New flow Text 18")
+
 
 
 
