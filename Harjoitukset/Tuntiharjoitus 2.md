@@ -177,7 +177,139 @@ Tämän jälkeen **Derived Field Name** kohtaan kirjoita **month** ja **Expressi
 
 ![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.00.04.png "New flow Text 18")
 
+#### Period
+
+Raaha uusi **Derive** node kanvakselle ja yhdistä se **month** nodeen. Avaa uusi **derive** node. Vaihda Noden nimi **Period**:ksi ja **Derived Field Name** kohtaan kirjoita **period**. Vaihda **Measurement Nomial** muotoon. **Expression** kohtaan kirjoita kaava **to_string(year) >< "-" >< to_string(month)**
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.00.04.png "New flow Text 19")
+
+Paina **Run**
+
+#### Aggregointi
+
+Tarkastellaksemme havaintoja kunkin periodin osalta tarvitsemme **Aggregate** noden joka löytyy **Record Operations** valikon alta, yhdistä se **period** nodeen.
+
+Vaihda noden nimeksi **AGG period** ja **Key fields** kohtaan lisää **period** 
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.14.52.png "New flow Text 20")
+
+Paina **Aggregations** Nappia ja avautuvasta valikosta valitse **add columns** valitse **nOfIncidents** ja **SSleepinghours** Kolumnit.
+
+Paina **OK**
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.14.48.png "New flow Text 21")
+
+Seuraavassa ikkunassa paina **OK** 
+
+Muista vielä painaa **Save**
+
+Lisää seuraavaksi kaksi **plot** nodea **Graphs** valikosta ja yhdistä nämä luomaasi **AGG year** nodeen.
+
+Avaa näistä ensimmäinen.
+
+Valitse **X**-muuttujaan **period** ja **Y**-muuttujaan **nOfIncidents_mean**. Valitse **Overlay** valikosta vielä **Smoother**. Paina **Save**
+
+Tee sama toiselle graafille, mutta vaihda **Y**-muuttujaksi **Ssleepinghours_mean**.
+
+Paina **Save**
+
+Lisää vielä **Output** valikosta **table** node ja yhdistä sekin **AGG period** nodeen. Tällä nodella näämme luomamme aggregoinnin.
+
+Paina **Run**
+
+#### Välitehtävä
+
+Kuvaa word tiedostoosi, miten henkilön elinolot ovat muuttuneet datan eri ajanjaksoina.
+
+### Vaihe 5
+
+#### Mallintaminen
+
+Luomme puumallin, jonka avulla voimme ennustaa henkilön **nOfIncidents** lukua.
+
+Ensimmäisenä meidän pitää jakaa datamme **train** ja **test** setteihin, jotta voimme varmentaa saadut tulokset ja mallin laadun.
+
+Tähän tarvitsemme **Partition** noden **Field Operations** valikon alta. Yhdistä node **Type** nodeen, jonka olemme jo aikaisemmin lisänneet kanvakselle.
+
+Avaa tämän jälkeen **Partition** node. Vaihda **Training partition** luvuksi **80** ja **Testing partition** luvuksi **20**. Tällä asetuksella 80% datasta on training dataa ja 20% testing dataa.
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.28.33.png "New flow Text 22")
+
+Paina **Save**
+
+Seuraavaksi lisäämme itse käytetyn **algoritmin** kanvakselle. **Modeling** valikon alta löytyy **C&R Tree** niminen puumalli, jota käytämme tässä mallinnuksessa.
+
+Avaa **C&R Tree** Node. Laita raksi **Use custom field roles** kohtaan.
+
+**Inputs** Kohdasta poista kaikki muut paitsi **Ssleepinghours**, **awakenings** ja **RHR**.
+
+Tämän jälkeen valitse **Target** kohtaan **nOfIncidents**
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.33.29.png "New flow Text 23")
+
+Paina **Save**
+
+Paina tämän jälkeen **Run**, jolloin algoritmi lähtee kouluttamaan mallia.
+
+Mallin onnistuneen kouluttamisen jälkeen **C&R Tree** Noden alle ilmestyy uusi Oranssin värinen node, tämä on luomasi malli.
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.37.41.png "New flow Text 24")
 
 
+#### Mallin tarkastelu ja arviointi
 
+Mallin tiedot pääsee näkemään kun vie hiiren oranssin noden päälle ja painaa ilmestyvää **kolmea** pistettä ja valitsee view model. Tästä pitäisi aueta seuraavanlainen näkymä:
 
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.39.34.png "New flow Text 25")
+
+**Predictor Importance** kohdasta pääset tarkastelemaan mitkä muuttujat vaikuttavat malliin eniten ja kuinka paljon.
+
+**Top Decision Rules** näyttää mitkä ovat parhaimmat säännöt päätöksen tekemiseen
+
+**Tree Diagram** Näyttää itse puumallin puun rakenteen. Lisäämällä raksi kohtaan **Display labels on branches** näät kunkin Säännön polun.
+
+#### Välitehtävä
+
+Ota näyttökuva puu diagrammistasi ja kerro lyhyesti mihin päätösketjuihin malli perustuu
+
+### Vaihe 6
+
+#### Mallilla ennustaminen
+
+Palaa kanvakselle painamalla toolbarin yläpuolelta flowsi nimeä **Tuntiharjoitus 2_Omanime**.
+
+Poista seuraavaksi yhteys **Partition** noden ja **Oranssin** noden väliltä, klikkaamalla viivan päältä hiiren oikealla näppäimellä ja valitsemalla delete.
+
+Lisää **mport** valikon alta node valinnasta node **User Input** ja yhdistä se oranssiin nodeen tämän jälkeen avaa **User Input**
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.47.07.png "New flow Text 26")
+
+Paina **Define fields** nappia ja avautuvassa ikkunassa klikkaa **Add value** kolmesti. **Field name** kohtaan lisää eri riveille **SSleepinghours**, **awakenings** ja **RHR** eli meidän mallin **inputit**
+
+Vaihda kaikkien **Storage** kohta **Integer**:iksi
+
+**Definition** kohdasta paina **-** merkkiä ja lisää seuraavat arvot niiden omille riveille
+
+Ssleepinghours 7
+
+awakenings 1
+
+RHR 55
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.52.37.png "New flow Text 27")
+
+Voit jatkossa vaihtaa arvoja oman mielen mukaan.
+
+Paina **OK** ja sitten **Save**
+
+Lisää seuraavaksi kanvakselle uusi **table** node output valikosta ja yhdistä se oranssin noden toiseen päähän. Avaa tablen asetukset ja vaihda sen nimi muotoon ennuste. Paina **Save**
+
+![alt text](https://github.com/LasseHuotari/Analyticsbasic/blob/master/images/Näyttökuva%202018-10-4%20kello%209.55.13.png "New flow Text 28")
+
+Paina tämän jälkeen **Run** ja avaa output valikosta **ennuste**
+
+Näet nyt syöttämilläsi arvoilla tehdyn ennusteen.
+
+## Vaihe 7
+
+Harjoitus on nyt valmis ja olet luonut end to end flow, jossa data tuodaan sisään, sen laatu varmistetaan, siitä tehdään havaintoja jotka tukee sekä haluttua mallia, että toissijaisia tavoitteita kuten miten henkilön käyttäytyminen on muuttunut ajanjakson ajalla.
